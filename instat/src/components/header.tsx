@@ -5,7 +5,7 @@ import logo from '../assets/img/logo.svg'
 
 const HeaderWrapper = styled.header`
     padding: 20px 0;
-    background-color: black;
+    background-color: rgba(0,0,0, 0.7);
     width: 100%;
 `
 const Logo = styled.img`

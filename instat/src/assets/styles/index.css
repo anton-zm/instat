@@ -2,3 +2,8 @@
     padding: 0;
     margin: 0;
 }
+
+body {
+    background: linear-gradient(225deg, #090D0D 0%, #2F5759 50%, #090D0D 100%);
+    background-attachment: fixed;
+}
