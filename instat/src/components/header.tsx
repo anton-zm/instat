@@ -16,7 +16,7 @@ const MenuLink = styled.a`
     text-transform: uppercase;
     color: white;
     text-decoration: none;
-    margin-left: 25px;
+    margin:0 25px;
     cursor: pointer;
     opacity: 0.7;
     transition: 0.3s;
