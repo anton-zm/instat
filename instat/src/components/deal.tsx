@@ -12,10 +12,10 @@ const DealWrapper = styled.section`
     margin-top: 32px;
 `
 
-export const Deal = observer(({text}:{text:string}) => {
+export const Deal = observer(({todo}:{todo:DealType}) => {
     return (
-        <DealWrapper>
-            <span>{text}</span>
+        <DealWrapper className='flex-row'>
+            <span>{todo.name}</span>
         </DealWrapper>
     )
 })

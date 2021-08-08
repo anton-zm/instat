@@ -28,7 +28,7 @@ export const Deals = observer(({data}:{data:DealType[]}) => {
             </div>}
             <div className='flex-column w100'>
                 {data.map((deal, i) => (
-                    <Deal key={i} text={deal.name} /> 
+                    <Deal key={i} todo={deal} /> 
                 ))}
             </div>
         </DealsWrapper>
