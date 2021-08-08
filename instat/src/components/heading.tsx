@@ -10,7 +10,7 @@ const HeadingWrapper = styled.div`
     padding: 32px 0;
 `
 
-export const Heading = observer(() => {
+export const Heading = observer(({onUpdate}:{onUpdate:(v:string) => void}) => {
     const [value, setValue] = useState('')
 
     const addTodo = () => {
@@ -34,7 +34,10 @@ export const Heading = observer(() => {
     
     return (
         <HeadingWrapper className='flex-row between'>
-            <Input type='text' value={value} placeholder='Enter your deal' onChange={(e) => setValue(e.target.value)} />
+            <Input type='text' value={value} placeholder='Enter your deal' onChange={(e) => {
+                setValue(e.target.value)
+                onUpdate(e.target.value)
+            }} />
             <Button onClick={addTodo}>Add</Button>
         </HeadingWrapper>
     )

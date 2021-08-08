@@ -17,6 +17,11 @@ class Storage {
     addTodo(todo:DealType){
         this._todos.push(todo)
     }
+
+    doneTodo(id:string){
+        const todo = this._todos.filter((e) => e.id === id)[0]
+        todo.done = !todo.done
+    }
 }
 
 
