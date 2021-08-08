@@ -7,4 +7,5 @@ export const Button = styled.button<{margin?:string}>`
     color: #c1c1c1;
     margin: ${(props) => props.margin};
     background-color: transparent;
+    cursor: pointer;
 `

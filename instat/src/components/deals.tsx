@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Deal, DealType } from './deal'
+import { observer } from 'mobx-react-lite'
+
 
 const DealsWrapper = styled.section`
     margin-top: 64px;
@@ -17,7 +19,7 @@ const NoDeals = styled.p`
 
 `
 
-export const Deals = ({data}:{data:DealType[]}) => {
+export const Deals = observer(({data}:{data:DealType[]}) => {
     return (
         <DealsWrapper>
             <DealsTitle>Your deals:</DealsTitle>
@@ -25,10 +27,10 @@ export const Deals = ({data}:{data:DealType[]}) => {
                  <NoDeals>No deals ...</NoDeals>
             </div>}
             <div className='flex-column w100'>
-                {data.map((deal) => (
-                    <Deal key={deal.id} text={deal.name} />
+                {data.map((deal, i) => (
+                    <Deal key={i} text={deal.name} /> 
                 ))}
             </div>
         </DealsWrapper>
     )
-}
+})

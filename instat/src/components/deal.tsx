@@ -1,19 +1,21 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
+import { observer } from 'mobx-react-lite'
 
 export type DealType = {
-    id: string | number,
-    name: string
+    id: string,
+    name: string,
+    done: boolean
 }
 
 const DealWrapper = styled.section`
     margin-top: 32px;
 `
 
-export const Deal = ({text}:{text:string}) => {
+export const Deal = observer(({text}:{text:string}) => {
     return (
         <DealWrapper>
             <span>{text}</span>
         </DealWrapper>
     )
-}
+})
