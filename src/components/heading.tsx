@@ -17,6 +17,7 @@ export const Heading = observer(({onUpdate}:{onUpdate:(v:string) => void}) => {
         const ID = uuidv4()
         Store.addTodo({id:ID, name: value, done: false})
         setValue('')
+        onUpdate('')
     }
 
     useEffect(() => {

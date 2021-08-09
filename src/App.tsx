@@ -21,13 +21,12 @@ const App = observer(() => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[text])
 
-  
   return (
     <div className="App">
       <Header />
       <Content style={{minHeight:'85vh'}}>
         <Heading onUpdate={setText}  />
-        <Deals data={filter}/>
+        <Deals data={text ? filter : todos}/>
       </Content>
       <Footer />
     </div>
